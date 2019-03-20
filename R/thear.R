@@ -118,6 +118,9 @@ multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
 }
 
 #' Split filenames from RADI into meaningful units
+#'
+#' This is designed to be used with the RADI data
+#' @param df Dataframe containing a column filename to be split
 #' @export
 # radi_filename_prep----
 # Splits filename of radi into condition, participant, item, irrelevant, wav_status, & creates new group, rate columns

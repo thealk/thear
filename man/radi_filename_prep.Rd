@@ -6,6 +6,9 @@
 \usage{
 radi_filename_prep(df)
 }
+\arguments{
+\item{df}{Dataframe containing a column filename to be split}
+}
 \description{
-Split filenames from RADI into meaningful units
+This is designed to be used with the RADI data
 }
