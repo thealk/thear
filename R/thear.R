@@ -6,7 +6,9 @@
 # source("/Users/thea/Documents/R Files/RFunctions.R")
 
 
-#`title{summarySE}
+#' Create summary table. [Source](http://www.cookbook-r.com/Manipulating_data/Summarizing_data/)
+#' @export
+
 # SummarySE ----
 # Source: http://www.cookbook-r.com/Manipulating_data/Summarizing_data/
 summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
@@ -77,6 +79,7 @@ makeCumulative <- function(table){
 }
 
 #' Plot many plots
+#' @export
 # multiplot----
 multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
   library(grid)
@@ -115,6 +118,7 @@ multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
 }
 
 #' Split filenames from RADI into meaningful units
+#' @export
 # radi_filename_prep----
 # Splits filename of radi into condition, participant, item, irrelevant, wav_status, & creates new group, rate columns
 # Factors condition, participant, item, group
@@ -143,6 +147,7 @@ radi_filename_prep <- function(df){
 
 
 #' Remove duplicate files from visual analog scale results
+#' @export
 # Remove_duplicaites_vas----
 # REMOVE DUPLICATES FUNCTION for VAS.PRAAT OUTPUT
 
