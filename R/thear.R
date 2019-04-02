@@ -129,14 +129,14 @@ radi_filename_prep <- function(df){
   df <- df %>%
     separate(filename, c("condition", "participant", "item", "irrelevant", "wav_status"), remove=FALSE) %>%
     mutate(group = factor(str_sub(participant, 1, 1)),
-           rate = revalue(condition, replace = c("slower4x" = "s4",
-                                                 "slower3x" = "s3",
-                                                 "slower2x" = "s2",
-                                                 "habitual" = "h1",
-                                                 "faster2x" = "f2",
-                                                 "faster3x" = "f3",
-                                                 "faster4x" = "f4"))) %>%
-    mutate(rate = factor(rate, levels = c("s4","s3","s2","h1","f2","f3","f4"))) %>%
+           rate = revalue(condition, replace = c("slower4x" = "S4",
+                                                 "slower3x" = "S3",
+                                                 "slower2x" = "S2",
+                                                 "habitual" = "H1",
+                                                 "faster2x" = "F2",
+                                                 "faster3x" = "F3",
+                                                 "faster4x" = "F4"))) %>%
+    mutate(rate = factor(rate, levels = c("S4","S3","S2","H1","F2","F3","F4"))) %>%
     mutate(group = revalue(group, replace = c("1" = "YC", # There is no YC in the acoustics
                                               "2" = "OC",
                                               "3" = "PD",
