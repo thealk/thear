@@ -2,7 +2,7 @@
 % Please edit documentation in R/calculate_habitual_mean.R
 \name{calculate_habitual_mean}
 \alias{calculate_habitual_mean}
-\title{Calculate habitual mean for RADI dataset}
+\title{Calculate habitual mean utterance duration for RADI dataset}
 \usage{
 calculate_habitual_mean(df)
 }
@@ -10,5 +10,5 @@ calculate_habitual_mean(df)
 \item{df}{Data frame with columns "participant", "utterance_duration", "rate". Habitual "rate" must *must* be called "H1"}
 }
 \description{
-Calculate habitual mean for RADI dataset
+Calculate habitual mean utterance duration for RADI dataset
 }

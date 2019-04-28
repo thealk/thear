@@ -1,6 +1,8 @@
-#' Calculate the alternative speech rate metrics used in RADI: mean habitual wpm, wpm, prop_wpm, dev_wpm, percChange_wpm, and prop_wpm_3, 5, and 7 (binned into 3 5 and 7 bins)
+#' Calculate the alternative speech rate metrics used in RADI
+#'
+#' Rates include: mean_habit_wpm,, wpm, prop_wpm, dev_wpm, percChange_wpm, and prop_wpm_3, 5, and 7 (binned into 3 5 and 7 bins)
 #' @param df Data frame containing columns "participant"
-#' @param habit_means_df Summary data frame containing mean habitual rate for each participant. Defaults to habit_means_df, and can be created with thear::calculate_habitual_mean
+#' @param habit_means_df Summary data frame containing mean habitual rate for each participant. Defaults to habit_means_df, and can be created with thear::calculate_habitual_mean. Defaults to `habit_means_df``
 #' @export
 
 # df requires columns: participant, prop_wpm
