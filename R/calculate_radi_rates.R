@@ -57,23 +57,23 @@ calculate_radi_rates <- function(df, habit_means_df = habit_df){
 
 
     # Source: https://stackoverflow.com/questions/30032616/how-to-combine-two-levels-in-one-categorical-variable-in-r
-    levels(tmp_range$prop_wpm_3)[levels(tmp_range$prop_wpm_3)%in%c("s3","s2")] <- "s"
-    levels(tmp_range$prop_wpm_3)[levels(tmp_range$prop_wpm_3)%in%c("s1","f1")] <- "h"
-    levels(tmp_range$prop_wpm_3)[levels(tmp_range$prop_wpm_3)%in%c("f2","f3")] <- "f"
+    levels(tmp_range$prop_wpm_3)[levels(tmp_range$prop_wpm_3)%in%c("s3","s2")] <- "S2"
+    levels(tmp_range$prop_wpm_3)[levels(tmp_range$prop_wpm_3)%in%c("s1","f1")] <- "H1"
+    levels(tmp_range$prop_wpm_3)[levels(tmp_range$prop_wpm_3)%in%c("f2","f3")] <- "F1"
 
-    levels(tmp_range$prop_wpm_5)[levels(tmp_range$prop_wpm_5) %in% c("s5","s4")] <- "ss"
-    levels(tmp_range$prop_wpm_5)[levels(tmp_range$prop_wpm_5) %in% c("s3","s2")] <- "s"
-    levels(tmp_range$prop_wpm_5)[levels(tmp_range$prop_wpm_5) %in% c("s1","f1")] <- "h"
-    levels(tmp_range$prop_wpm_5)[levels(tmp_range$prop_wpm_5) %in% c("f2","f3")] <- "f"
-    levels(tmp_range$prop_wpm_5)[levels(tmp_range$prop_wpm_5) %in% c("f4","f5")] <- "ff"
+    levels(tmp_range$prop_wpm_5)[levels(tmp_range$prop_wpm_5) %in% c("s5","s4")] <- "S3"
+    levels(tmp_range$prop_wpm_5)[levels(tmp_range$prop_wpm_5) %in% c("s3","s2")] <- "S2"
+    levels(tmp_range$prop_wpm_5)[levels(tmp_range$prop_wpm_5) %in% c("s1","f1")] <- "H1"
+    levels(tmp_range$prop_wpm_5)[levels(tmp_range$prop_wpm_5) %in% c("f2","f3")] <- "F2"
+    levels(tmp_range$prop_wpm_5)[levels(tmp_range$prop_wpm_5) %in% c("f4","f5")] <- "F3"
 
-    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("s7","s6")] <- "sss"
-    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("s5","s4")] <- "ss"
-    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("s3","s2")] <- "s"
-    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("s1","f1")] <- "h"
-    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("f2","f3")] <- "f"
-    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("f4","f5")] <- "ff"
-    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("f6","f7")] <- "fff"
+    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("s7","s6")] <- "S4"
+    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("s5","s4")] <- "S3"
+    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("s3","s2")] <- "S2"
+    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("s1","f1")] <- "H1"
+    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("f2","f3")] <- "F2"
+    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("f4","f5")] <- "F3"
+    levels(tmp_range$prop_wpm_7)[levels(tmp_range$prop_wpm_7) %in% c("f6","f7")] <- "F4"
 
     # tmp_range %>% ggplot(aes(x=prop_wpm_3))+geom_histogram(stat="count")
     # tmp_range %>% ggplot(aes(x=prop_wpm_5))+geom_histogram(stat="count")

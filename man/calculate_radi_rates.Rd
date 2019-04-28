@@ -9,7 +9,7 @@ calculate_radi_rates(df, habit_means_df = habit_df)
 \arguments{
 \item{df}{Data frame containing columns "participant"}
 
-\item{habit_means_df}{Summary data frame containing mean habitual rate for each participant. Defaults to habit_means_df, and can be created with thear::calculate_habitual_mean. Defaults to `habit_means_df``}
+\item{habit_means_df}{Summary data frame containing mean habitual utterance duration (`mean_habit_rate`) for each participant. Defaults to habit_means_df, and can be created with thear::calculate_habitual_mean. Defaults to `habit_means_df``}
 }
 \description{
 Rates include: mean_habit_wpm,, wpm, prop_wpm, dev_wpm, percChange_wpm, and prop_wpm_3, 5, and 7 (binned into 3 5 and 7 bins)
