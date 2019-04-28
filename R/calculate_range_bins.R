@@ -12,7 +12,7 @@ calculate_range_bins <- function(df){
   # Splits range up into nBins (default = 3) for each group
 
   range_bins_df <- data.frame(matrix(ncol = ncol(df),nrow=0))
-  names(range_bins_names) <- names(df)
+  names(range_bins_df) <- names(df)
 
 
   for(p in levels(df$participant)){ # used to be group, changed it to participant
