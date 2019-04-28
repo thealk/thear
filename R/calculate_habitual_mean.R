@@ -1,4 +1,5 @@
 #' Calculate habitual mean for RADI dataset
+#' @param df Data frame with columns "participant", "utterance_duration", "rate". Habitual "rate" must *must* be called "H1"
 #' @export
 
 # df requires columns: participant, utterance_duration, rate (incl H1)

@@ -1,4 +1,6 @@
-#' Calculate bins of 3, 5, 7 of proportional rate for RADI dataset
+#' Calculate the alternative speech rate metrics used in RADI: mean habitual wpm, wpm, prop_wpm, dev_wpm, percChange_wpm, and prop_wpm_3, 5, and 7 (binned into 3 5 and 7 bins)
+#' @param df Data frame containing columns "participant"
+#' @param habit_means_df Summary data frame containing mean habitual rate for each participant. Defaults to habit_means_df, and can be created with thear::calculate_habitual_mean
 #' @export
 
 # df requires columns: participant, prop_wpm
@@ -7,9 +9,22 @@
 
 # THIS IS A GROSS FUNCTION BUT IT WORKS
 # Calculates proportional rate in wpm (prop_wpm) in bins of 3, 5, and 7, centered around habitual rate (i.e., when prop_wpm = 1) for each participant
-calculate_range_bins <- function(df){
+calculate_radi_rates <- function(df, habit_means_df = habit_df){
   # Takes DF, and for each PARTICIPANT!, calculates range of numeric (rate) variable (intended for prop_wpm)
   # Splits range up into nBins (default = 3) for each group
+
+  # Create relevant dur columns first:
+
+  df <- df %>%
+  mutate(mean_habit_dur = habit_df$mean_habit_rate[
+    match(unlist(stops$participant),
+          habit_df$participant)]) %>%
+    mutate(mean_habit_wpm = (4/mean_habit_dur)*60,
+           wpm = (4/utterance_duration)*60) %>%
+    mutate(prop_wpm = wpm/mean_habit_wpm) %>% #>1=fast, <1=slow
+    mutate(dev_wpm = wpm - mean_habit_wpm) %>% # >0 = fast, <0 = slow
+    mutate(percChange_wpm = (mean_habit_wpm - wpm)/mean_habit_wpm)
+
 
   range_bins_df <- data.frame(matrix(ncol = ncol(df),nrow=0))
   names(range_bins_df) <- names(df)

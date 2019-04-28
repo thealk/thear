@@ -6,6 +6,9 @@
 \usage{
 calculate_habitual_mean(df)
 }
+\arguments{
+\item{df}{Data frame with columns "participant", "utterance_duration", "rate". Habitual "rate" must *must* be called "H1"}
+}
 \description{
 Calculate habitual mean for RADI dataset
 }
