@@ -2,11 +2,15 @@
 % Please edit documentation in R/thear.R
 \name{summarySE}
 \alias{summarySE}
-\title{Create summary table. [Source](http://www.cookbook-r.com/Manipulating_data/Summarizing_data/)}
+\title{Create summary table.
+[Source](http://www.cookbook-r.com/Manipulating_data/Summarizing_data/).
+Warning: detaches and reloads dplyr}
 \usage{
 summarySE(data = NULL, measurevar, groupvars = NULL, na.rm = FALSE,
   conf.interval = 0.95, .drop = TRUE)
 }
 \description{
-Create summary table. [Source](http://www.cookbook-r.com/Manipulating_data/Summarizing_data/)
+Create summary table.
+[Source](http://www.cookbook-r.com/Manipulating_data/Summarizing_data/).
+Warning: detaches and reloads dplyr
 }

@@ -6,13 +6,16 @@
 # source("/Users/thea/Documents/R Files/RFunctions.R")
 
 
-#' Create summary table. [Source](http://www.cookbook-r.com/Manipulating_data/Summarizing_data/)
+#' Create summary table.
+#' [Source](http://www.cookbook-r.com/Manipulating_data/Summarizing_data/).
+#' Warning: detaches and reloads dplyr
 #' @export
 
 # SummarySE ----
 # Source: http://www.cookbook-r.com/Manipulating_data/Summarizing_data/
 summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
                       conf.interval=.95, .drop=TRUE) {
+  detach(package:dplyr)
   library(plyr)
 
   # New version of length which can handle NA's: if na.rm==T, don't count them
@@ -45,6 +48,7 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
   datac$ci <- datac$se * ciMult
 
   return(datac)
+  library(plyr)
 }
 
 #' Make a cumulative sums dataframe
