@@ -21,8 +21,8 @@ calculate_radi_rates <- function(df, habit_means_df = habit_df){
   mutate(mean_habit_dur = habit_df$mean_habit_rate[
     match(unlist(stops$participant),
           habit_df$participant)]) %>%
-    mutate(mean_habit_wpm = (4/mean_habit_dur)*60,
-           wpm = (4/utterance_duration)*60) %>%
+    mutate(mean_habit_wpm = (nwords/mean_habit_dur)*60,
+           wpm = (nwords/utterance_duration)*60) %>%
     mutate(prop_wpm = wpm/mean_habit_wpm) %>% #>1=fast, <1=slow
     mutate(dev_wpm = wpm - mean_habit_wpm) %>% # >0 = fast, <0 = slow
     mutate(percChange_wpm = (mean_habit_wpm - wpm)/mean_habit_wpm)
