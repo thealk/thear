@@ -18,7 +18,7 @@ calculate_habitual_mean <- function(df){
       summarise_at(vars(utterance_duration),
                    funs(mean(., na.rm = TRUE))) %>%
       mutate(participant = p) %>%
-      rename(mean_habit_rate = utterance_duration) %>%
+      dplyr::rename(mean_habit_rate = utterance_duration) %>%
       select(participant, mean_habit_rate)
     habit_df <- rbind(habit_df, tmp_rate)
   }
