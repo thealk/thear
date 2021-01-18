@@ -6,8 +6,14 @@
 [Source](http://www.cookbook-r.com/Manipulating_data/Summarizing_data/).
 Warning: detaches and reloads dplyr}
 \usage{
-summarySE(data = NULL, measurevar, groupvars = NULL, na.rm = FALSE,
-  conf.interval = 0.95, .drop = TRUE)
+summarySE(
+  data = NULL,
+  measurevar,
+  groupvars = NULL,
+  na.rm = FALSE,
+  conf.interval = 0.95,
+  .drop = TRUE
+)
 }
 \description{
 Create summary table.
