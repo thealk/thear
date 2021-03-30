@@ -2,6 +2,7 @@
 
 export(calculate_habitual_mean)
 export(calculate_radi_rates)
+export(make_coefs)
 export(multiplot)
 export(open_tg_wav)
 export(plot_emm_contrasts)
