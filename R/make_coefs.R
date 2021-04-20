@@ -1,4 +1,6 @@
 #' Create coefficients dataframes to use in in-line R reporting.
+#' Output: vector of beta estimates, p-values, and effect sizes
+#' Effect sizes based on Brysbaert, M. and Stevens, M. 2018 Power Analysis and Effect Size in Mixed Effects Models: A Tutorial. Journal of Cognition, 1(1): 9, pp. 1–20, DOI: https://doi.org/10.5334/joc.10
 #' @export
 #'
 # Create coefs function
@@ -10,6 +12,7 @@ make_coefs <- function(model, mod_name){
     column_to_rownames()
 
   # Get total variance in order to calculate effect size
+  # Source: https://www.journalofcognition.org/articles/10.5334/joc.10/
   mod_var <- summary(model)$varcor %>% as.data.frame()
   tot_var <- sum(mod_var$vcov)
 

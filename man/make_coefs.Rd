@@ -2,10 +2,14 @@
 % Please edit documentation in R/make_coefs.R
 \name{make_coefs}
 \alias{make_coefs}
-\title{Create coefficients dataframes to use in in-line R reporting.}
+\title{Create coefficients dataframes to use in in-line R reporting.
+Output: vector of beta estimates, p-values, and effect sizes
+Effect sizes based on Brysbaert, M. and Stevens, M. 2018 Power Analysis and Effect Size in Mixed Effects Models: A Tutorial. Journal of Cognition, 1(1): 9, pp. 1–20, DOI: https://doi.org/10.5334/joc.10}
 \usage{
 make_coefs(model, mod_name)
 }
 \description{
 Create coefficients dataframes to use in in-line R reporting.
+Output: vector of beta estimates, p-values, and effect sizes
+Effect sizes based on Brysbaert, M. and Stevens, M. 2018 Power Analysis and Effect Size in Mixed Effects Models: A Tutorial. Journal of Cognition, 1(1): 9, pp. 1–20, DOI: https://doi.org/10.5334/joc.10
 }
