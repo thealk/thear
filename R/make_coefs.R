@@ -7,9 +7,7 @@
 make_coefs <- function(model, mod_name){
   df <- summary(model)$coefficients %>%
     as.data.frame() %>%
-    rownames_to_column() %>%
-    mutate_if(is.numeric,round,3) %>%
-    column_to_rownames()
+    rownames_to_column()
 
   # Get total variance in order to calculate effect size
   # Source: https://www.journalofcognition.org/articles/10.5334/joc.10/
@@ -17,7 +15,9 @@ make_coefs <- function(model, mod_name){
   tot_var <- sum(mod_var$vcov)
 
   df <- df %>%
-    mutate(eff_size = Estimate/sqrt(tot_var))
+    mutate(eff_size = Estimate/sqrt(tot_var)) %>%
+    mutate_if(is.numeric,round,3) %>%
+    column_to_rownames()
 
   b <- df['Estimate']
   p <- df['Pr(>|t|)']
