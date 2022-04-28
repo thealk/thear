@@ -3,13 +3,19 @@
 \name{make_coefs}
 \alias{make_coefs}
 \title{Create coefficients dataframes to use in in-line R reporting.
-Output: vector of beta estimates, p-values, and effect sizes
-Effect sizes based on Brysbaert, M. and Stevens, M. 2018 Power Analysis and Effect Size in Mixed Effects Models: A Tutorial. Journal of Cognition, 1(1): 9, pp. 1–20, DOI: https://doi.org/10.5334/joc.10}
+Output: vector of beta estimates, p-values, and effect sizes (delta)
+Effect sizes based on Brysbaert, M. and Stevens, M. 2018 Power Analysis and Effect Size in Mixed Effects Models: A Tutorial. Journal of Cognition, 1(1): 9, pp. 1–20, DOI: https://doi.org/10.5334/joc.10
+Hedges, L. V. (2007). Effect Sizes in Cluster-Randomized Designs. Journal of Educational and Behavioral Statistics, 32(4), 341–370.
+https://journals.sagepub.com/doi/pdf/10.3102/1076998606298043
+See also this Stack Exchange post: https://stats.stackexchange.com/questions/257985/how-can-i-derive-effect-sizes-in-lme4-and-describe-the-magnitude-of-fixed-effect}
 \usage{
 make_coefs(model, mod_name)
 }
 \description{
 Create coefficients dataframes to use in in-line R reporting.
-Output: vector of beta estimates, p-values, and effect sizes
+Output: vector of beta estimates, p-values, and effect sizes (delta)
 Effect sizes based on Brysbaert, M. and Stevens, M. 2018 Power Analysis and Effect Size in Mixed Effects Models: A Tutorial. Journal of Cognition, 1(1): 9, pp. 1–20, DOI: https://doi.org/10.5334/joc.10
+Hedges, L. V. (2007). Effect Sizes in Cluster-Randomized Designs. Journal of Educational and Behavioral Statistics, 32(4), 341–370.
+https://journals.sagepub.com/doi/pdf/10.3102/1076998606298043
+See also this Stack Exchange post: https://stats.stackexchange.com/questions/257985/how-can-i-derive-effect-sizes-in-lme4-and-describe-the-magnitude-of-fixed-effect
 }
